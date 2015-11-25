@@ -22,6 +22,9 @@
         statService.getBankStat().then(function(stat) {
             _.extend($scope, stat);
         });
-    }
+        
+        $scope.currentValue = 9;
 
+    }
+    
 })();

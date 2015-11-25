@@ -54,6 +54,7 @@
             desc: ctrl.emptyField(/.{0,100}/),
 
             initTestData: initTestData,
+            test1: test1,
             unavailiable: unavailiable,
             register: register,
             toggleSeedType: toggleSeedType
@@ -114,6 +115,20 @@
                     registration = false;
                 });
         }
+        
+        function test1() {
+            var accountData = get('nickname', 'firstName', 'lastName');
+            switch (accountType) {
+                case 'creditor':
+                    _.extend(accountData, get('desc'));
+                    break;
+                case 'debtor':
+                    _.extend(accountData, get('facebook', 'email'));
+                    break;
+            }
+
+            regService.test1(accountType, auth, accountData);
+        }
 
         function unavailiable() {
             return registration || $scope.microbank.$invalid || $scope[accountType].$invalid || ($scope.debtorRegistration && $scope.social.$invalid);
@@ -124,6 +139,7 @@
                 $scope[fieldName].value = value;
             });
         }
+        
     }
 
 })();

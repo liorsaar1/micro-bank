@@ -1,748 +1,1203 @@
-[{
+[
+  {
     "constant": true,
     "inputs": [],
     "name": "isDebtor",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "res",
         "type": "bool"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "nameRegAddress",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "address"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getCreditorBidCount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "idx",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "getDebtorActiveAsk",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskAmount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "infoField",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "getDebtorInfo",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "info",
         "type": "string"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getBidCreditor",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "address"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [],
+    "name": "getContact",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "idx",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "getCreditorBidId",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "lastError",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "bytes32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "creditor",
+        "type": "address"
+      }
+    ],
+    "name": "getCreditorActiveBidIds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32[]"
+      }
+    ],
+    "type": "function"
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "nick",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "creditorUpdateNick",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "profileName",
         "type": "bytes32"
-    }, {
+      },
+      {
         "name": "url",
         "type": "string"
-    }],
+      }
+    ],
     "name": "debtorConfirmPublicProfile",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "idx",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "getCreditorActiveBidId",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "debtorCancelAsk",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "error",
         "type": "bytes32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getBidRemainingAmount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "amount",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskBidIds",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32[]"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskComment",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "string"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getBidPercents",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "isCreditor",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "res",
         "type": "bool"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getCreditorNick",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "nick",
         "type": "bytes32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "amount",
         "type": "uint256"
-    }, {
+      },
+      {
         "name": "creditDays",
         "type": "uint32"
-    }, {
+      },
+      {
         "name": "comment",
         "type": "string"
-    }],
+      }
+    ],
     "name": "debtorAddAsk",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "getActiveDebtorsCount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "admin",
         "type": "address"
-    }],
+      }
+    ],
     "name": "removeAdministrator",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "infoField",
         "type": "bytes32"
-    }, {
+      },
+      {
         "name": "info",
         "type": "string"
-    }],
+      }
+    ],
     "name": "creditorUpdateInfo",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getDebtorAsksCount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "infoField",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "getCreditorInfo",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "info",
         "type": "string"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
+        "name": "creditor",
+        "type": "address"
+      }
+    ],
+    "name": "getCreditorBidIds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32[]"
+      }
+    ],
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getDebtorActiveAsksCount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }, {
+      },
+      {
         "name": "amount",
         "type": "uint256"
-    }, {
+      },
+      {
         "name": "percentsPerDay",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "creditorAddBid",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
+        "name": "contact",
+        "type": "string"
+      }
+    ],
+    "name": "setContact",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }, {
+      },
+      {
         "name": "amount",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "debtorAcceptBid",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "dealId",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskTime",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "debtor",
+        "type": "address"
+      }
+    ],
+    "name": "getDebtorActiveAsks",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32[]"
+      }
+    ],
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "getString",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "string"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "getDebtors",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "debtor",
         "type": "address[]"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getDebtorNick",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "nick",
         "type": "bytes32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskRemainingAmount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "amount",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "infoField",
         "type": "bytes32"
-    }, {
+      },
+      {
         "name": "info",
         "type": "string"
-    }],
+      }
+    ],
     "name": "debtorUpdateInfo",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "creditorDeposit",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAcceptedAmount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "amount",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
+        "name": "debtor",
+        "type": "address"
+      }
+    ],
+    "name": "getDebtorAsks",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32[]"
+      }
+    ],
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskCreditDays",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "name",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "named",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "address"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "newOwner",
         "type": "address"
-    }],
+      }
+    ],
     "name": "changeOwner",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getCreditorBalance",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "isAdmin",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "isAdmin",
         "type": "bool"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "getNow",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "idx",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "getActiveDebtor",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "profileName",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "getDebtorPublicProfile",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "url",
         "type": "string"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "debtorRefund",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "mainDebtRefund",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskBidsCount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "admin",
         "type": "address"
-    }],
+      }
+    ],
     "name": "addAdministrator",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "nick",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "debtorRegister",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "dealId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getDealInterest",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "amount",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "creditorCancelBid",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "error",
         "type": "bytes32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getCreditorActiveBids",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "bidIds",
         "type": "uint32[]"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "getArray",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256[]"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getBidAmount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "profileName",
         "type": "bytes32"
-    }],
+      }
+    ],
     "name": "debtorRemovePublicProfile",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getBidDeal",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "dealId",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getAskDebtor",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "address"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "bidId",
         "type": "uint32"
-    }],
+      }
+    ],
     "name": "getBidTime",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "resetAll",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "n",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "setNow",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "creditor",
         "type": "address"
-    }],
+      }
+    ],
     "name": "getCreditorActiveBidCount",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint256"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "debtor",
         "type": "address"
-    }, {
+      },
+      {
         "name": "idx",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "getDebtorAsk",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "creditorWithdrawAll",
     "outputs": [],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "getCreditors",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "address[]"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": false,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "amount",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "creditorWithdraw",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "error",
         "type": "string"
-    }],
+      }
+    ],
     "type": "function"
-}, {
+  },
+  {
     "constant": true,
-    "inputs": [{
+    "inputs": [
+      {
         "name": "askId",
         "type": "uint32"
-    }, {
+      },
+      {
         "name": "idx",
         "type": "uint256"
-    }],
+      }
+    ],
     "name": "getAskBidId",
-    "outputs": [{
+    "outputs": [
+      {
         "name": "",
         "type": "uint32"
-    }],
+      }
+    ],
     "type": "function"
-}]
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "creditor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "delta",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "current",
+        "type": "uint256"
+      }
+    ],
+    "name": "BalanceChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "debtor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "code",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "askId",
+        "type": "uint32"
+      }
+    ],
+    "name": "AskEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "creditor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "debtor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "code",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "bidId",
+        "type": "uint32"
+      },
+      {
+        "indexed": false,
+        "name": "askId",
+        "type": "uint32"
+      }
+    ],
+    "name": "BidEvent",
+    "type": "event"
+  }
+]

@@ -13,7 +13,8 @@
 
 
         return {
-            register: register
+            register: register,
+            test1: test1
         };
 
         function register(accountType, auth, accountData) {
@@ -23,11 +24,25 @@
                     from: auth.address
                 }
             });
-
+            
             return registration[accountType](accountData, mb)
                 .then(function() {
                     authService.autologin(auth);
                 });
+        }
+
+        function test1(accountType, auth, accountData) {
+            var mb = microBank.withCtx({
+                client: auth,
+                tx: {
+                    from: auth.address
+                }
+            });
+            
+            var promise = mb.getContact().then(function(contact) {
+                console.log( ">>> contact ", contact);
+            });
+            console.log( ">>> promise ", promise);
         }
 
         function registerCreditor(creditor, mb) {
